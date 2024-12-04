@@ -154,7 +154,7 @@ class PostController extends Controller
         $post = Post::find($id);
 
         // Tentukan path file gambar yang disimpan
-        $filePath = 'posts/' . basename($post->image);  // 'posts/{nama_file}'
+        $filePath = 'posts/' . basename($post->image);  
 
         // Cek apakah file ada
         if (Storage::disk('public')->exists($filePath)) {
